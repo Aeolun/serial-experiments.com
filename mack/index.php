@@ -91,11 +91,11 @@
 								?>
 							</select>
 						</div>
-						<div class="item" style="opacity:0.2;background-color:purple;" onclick="items['<?=$layer?>'] = '';redraw();"></div>
+						<div class="item" style="opacity:0.2;background-color:purple;" onclick="items['<?=$layer?>'] = redraw();"></div>
 						<?php
 						foreach($items[$layer] as $item):
 							?>
-							<img class="item" id="female/<?=$layer?>/<?=$item?>" src="female/<?=$layer?>/<?=$item?>" onclick="items['<?=$layer?>'] = 'female/<?=$layer?>/<?=$item?>';redraw();"/>';
+							<img class="item" id="female/<?=$layer?>/<?=$item?>" src="female/<?=$layer?>/<?=$item?>" onclick="items['<?=$layer?>'] = 'female/<?=$layer?>/<?=$item?>';redraw();"/>
 						<?php
 						endforeach;
 						?>

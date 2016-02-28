@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+ini_set('display_errors', false);
 session_start();
 header('Content-encoding: utf-8');
 if (isset($_POST['regex']) || isset($_POST['source'])) {
@@ -64,21 +66,25 @@ if (isset($_POST['regex']) || isset($_POST['source'])) {
 		</style>
 	</head>
 	<body>
+	<div class="container">
 		<div class="row-fluid" style="padding:20px;">
 			<div>
 				Regex
 			</div>
 			<div>
-				<textarea id="regex" name="regex" class="span12" style="font-size:20px;"><?=$_SESSION['regex']?></textarea>
+				<textarea id="regex" name="regex" placeholder="The regex you would match the text on." class="span12" style="font-size:20px;"><?=$_SESSION['regex']?></textarea>
 
 			</div>
-			<div>Scratch</div>
-			<div><textarea class="span12"></textarea></div>
+			<div>Scratchpad</div>
+			<div><textarea class="span12" placeholder="This is not used, but you can put anything here as temporary storage."></textarea></div>
 		</div>
 		<div class="row-fluid">
 			<div class="span4" style="padding:20px;">
 				<div>
-					<textarea id="source" name="source" class="span12" style="height:600px;"><?=$_SESSION['source']?></textarea>
+					<div>
+					Source Text
+					</div>
+					<textarea id="source" name="source" class="span12" placeholder="The source text that will be matched to the regex." style="height:500px;"><?=$_SESSION['source']?></textarea>
 				</div>
 			</div>
 			<div id="result" class="span5" style="padding:20px;overflow:auto;height:600px;">
@@ -131,5 +137,6 @@ if (isset($_POST['regex']) || isset($_POST['source'])) {
 			RegexColorizer.colorizeAll();
 			$('#regex').keyup();
 		</script>
+		</div>
 	</body>
 </html>

@@ -1,0 +1,7 @@
+1484983800
+a:2:{s:7:"content";s:589:"<p>Just in case someone runs into it again. Since it was annoying to find this and someone else might need it sometime. If your user account changes while using vagrant (on mac), there are three things you need to do:</p>
+<ul>
+<li>Find your new user and group id by running the command <code>id</code>.</li>
+<li>Update the <code>.vagrant/machines/default/virtualbox/creator_uid</code> file in your project directory with your new user id.</li>
+<li>Modify your <code>/etc/exports</code> file to contain your new user and group id under -mapall in the format [user_id]:[group_id].</li>
+</ul>";s:12:"content_meta";N;}

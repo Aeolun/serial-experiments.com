@@ -1,0 +1,16 @@
+title: 'Serial Experiments'
+author:
+  name: 'Bart Riepe'
+  email: bart@serial-experiments.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Serial Experiments is the personal website of Bart Riepe. He writes about software, frustrations, and startups.'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

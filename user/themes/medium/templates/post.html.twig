@@ -51,6 +51,10 @@
     {% endif %}
 </div>
 
+
+{% if config.plugins.jscomments.enabled %}
+  {{ jscomments()|raw }}
+{% endif %}
 {% if page.header.disqus %}
 <div class="archive readmore column small-12">
     <h3>Comments</h3>

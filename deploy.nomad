@@ -297,7 +297,7 @@ job "serial-experiments.com" {
       #     https://www.nomadproject.io/docs/job-specification/service.html
       #
       service {
-        name = "serial-experiments.com"
+        name = "serial-experiments-web"
         tags = [
           "global",
           "http",
